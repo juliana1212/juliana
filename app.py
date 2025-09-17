@@ -36,7 +36,7 @@ def contar_dias():
 
 @app.route("/<int:day_id>", methods=["GET"])
 def contar_dias(day_id):
-    return jsonify({"last_day": day[0]})
+    return jsonify(len(day)
 
     
 @app.route("/", methods=["POST"])
