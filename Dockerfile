@@ -10,5 +10,5 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
-/este es el comando que se ejecuta al iniciar el contenedor
+/este es el comando que se ejecuta al iniciar el contenedor 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
