@@ -25,10 +25,22 @@ def get_day(day_id):
         abort(404)
     return jsonify({"day": day[0]})
 
+____
 
+@app.route("/", methods=["GET"])
+def contar_dias():
+    return jsonify(days)
+
+
+@app.route("/<int:day_id>", methods=["GET"])
+def contar_dias(day_id):
+    return jsonify({"last_day": day[0]})
+
+    
 @app.route("/", methods=["POST"])
 def post_days():
     return jsonify({"success": True}), 201
+
 
 
 if __name__ == "__main__":
