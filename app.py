@@ -25,7 +25,9 @@ def get_day(day_id):
         abort(404)
     return jsonify({"day": day[0]})
 
-____
+
+def saludar():
+    print "Hola a todos"
 
 @app.route("/", methods=["GET"])
 def contar_dias():
